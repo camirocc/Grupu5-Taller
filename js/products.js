@@ -100,7 +100,7 @@ function mostrarProducts(products) {
 
 var nombreUsuario = localStorage.getItem('usuario');
 if (nombreUsuario) {
-    document.getElementById('usuarioBarra').textContent = nombreUsuario;
+    document.getElementById('usuarioBarraBtn').textContent = nombreUsuario;
 }
 
 function almacenamiento(elementId) {

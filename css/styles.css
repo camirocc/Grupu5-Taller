@@ -184,12 +184,21 @@ a {
   border-radius: 4px;
 } 
 
-#username {
+#usuarioBarraBtn {
   display: flex;
   justify-content: center;
   color :  #dc7712;
   align-items: center;
 }
+
+.dropdown-item:hover{
+  color: #dc7712;
+}
+
+#usuarioBarraBtn::after {
+  display: none;  /* Oculta el ícono de la flecha */
+}
+
 .card {
   margin: 20px;
   border-radius: 20px;
