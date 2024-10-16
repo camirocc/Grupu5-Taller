@@ -21,9 +21,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// Funcionalidad para el botón de cerrar sesión
+document.getElementById('logout-btn').addEventListener('click', function() {
+    // Elimina el usuario del localStorage
+    localStorage.removeItem('usuario');
+    localStorage.removeItem('loggedIn'); // Elimina el estado de sesión si corresponde
+    window.location.href = 'login.html'; // Redirige a la pantalla de inicio de sesión
+}); 
+
+
 var nombreUsuario = localStorage.getItem('usuario');
 
 if (nombreUsuario) {
-    document.getElementById('usuarioBarra').textContent = nombreUsuario;
+    document.getElementById('usuarioBarraBtn').textContent = nombreUsuario;
 }
 
