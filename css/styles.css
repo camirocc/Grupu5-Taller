@@ -447,13 +447,24 @@ a {
 label {
   margin-bottom: 5px; /* Espacio entre el label y el input */
 }
-/*.container {
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-} */
 
+.profile-nav{
+  display: flex;
+  flex-direction: row;
+}
+
+.container-profile {
+  flex: 1;
+  justify-content: end;
+}
+
+h2 {
+  flex: 1;
+  display: flex;
+  justify-content: start;
+  position: relative;
+  top: 90px;
+}
 
 .profile-form {
   display: grid;
@@ -511,6 +522,35 @@ body.active .borde {
 body.active #usuario,body.active
 #comentario {
   background-color: #444444;
+  
+}
+
+.profile-img {
+  flex: 1;
+}
+
+
+
+
+
+/* desafiate */
+
+.profile-section {
+  position: relative; /* Permite que los elementos hijos se posicionen relativos a este contenedor */
+}
+
+.profile-img {
+  width: 150px; 
+  height: 150px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-bottom: 10px; /* Espacio entre la imagen y el botón */
+}
+
+.btn {
+  background-color: #dd5410; 
+  border: #a88a8a solid; 
+  display: block; /* Asegura que el botón esté en una nueva línea */
 }
 
 

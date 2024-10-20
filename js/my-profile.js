@@ -1,5 +1,5 @@
-// Cargar foto de perfil desde localStorage
-window.onload = function() {
+ // Cargar foto de perfil desde localStorage al cargar la página
+ window.onload = function() {
     const profilePic = localStorage.getItem('profilePic');
     if (profilePic) {
         document.getElementById('profile-pic').src = profilePic;

@@ -69,8 +69,17 @@
          <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
       </div> -->
 
-    <h1 id="perfilDeUsuario">PERFIL DE USUARIO </h1>
     <form class="profile-form">
+      <div class="profile-nav">
+       <div class="container-profile">
+          <img id="profile-pic" src="" alt="Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+          <input type="file" id="upload" accept="image/*" style="display: none;">
+          <br>
+          <button id="upload-btn" class="btn btn-primary mt-3" style="background-color: #dd5410; border: #a88a8a solid;">Actualizar foto de perfil</button>
+        </div>
+        <h2>Mi Perfil </h2>
+      </div>  
+
       <div class="form-group">
         <label for="nombre">Nombre </label>
         <input class="textArea2" type="text" id="nombre" name="nombre" required>
@@ -84,17 +93,12 @@
         <input class="textArea2" type="text" id="E-mail" name="E-mail" required>
         <label for="TelefonoDeContacto"> Teléfono de contacto </label>
         <input class="textArea2" type="text" id="contacto" name="TelefonoDeContacto">
-        <div class="col-sm-12">
-          <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
-            data-bs-target="#modalTerminos">Términos del servicio</button>
-        </div>
         <div class="form-check form-switch">
           <input class="form-check-input"  type="checkbox" value="" id="check1" name="check 1"> 
-          <label class "form-check-label" for="check1">Modo día/noche </label>
+          <label class= "form-check-label" for="check1">Modo día/noche </label>
         </div>
-        <div class="form-group">
-          <label for="foto">Poner foto de perfil </label>
-          <input type="file" id="foto" name="foto">
+      
+        </div>
         </div>
 
 
@@ -103,15 +107,6 @@
       </form>
     </div>
     <main>
-      <div class="container" style="text-align: left; position: absolute; top: 50px; left: 10px;">
-        <h2>Mi Perfil</h2>
-        <div>
-          <img id="profile-pic" src="" alt="Foto de perfil" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
-          <input type="file" id="upload" accept="image/*" style="display: none;">
-          <br>
-          <button id="upload-btn" class="btn btn-primary mt-3" style="background-color: #dd5410; border: #a88a8a solid;">Actualizar foto de perfil</button>
-        </div>
-      </div>
       
     </main>
 
