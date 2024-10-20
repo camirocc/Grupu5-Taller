@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -27,7 +28,7 @@
   </style>
 </head>
 
-<body>
+<body id = "my-profile">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -59,13 +60,46 @@
       </div>
     </div>
   </nav>
+  
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+    <!-- <div class="container">-->
+    
+      <!-- <div class="alert alert-danger text-center" role="alert">
+         <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      </div> -->
+      
+      <h1 id="perfilDeUsuario">PERFIL DE USUARIO </h1>
+      <form class = "profile-form">
+        <div class="form-group">
+          <label for="nombre">Nombre </label>
+          <input class = "textArea2" type="text" id="nombre" name="nombre" required>
+          <label for="segundoNombre">Segundo nombre </label>
+          <input class = "textArea2" type="text" id="segundoNombre" name="segundoNombre">
+          <label for="apellido"> Apellido </label>
+          <input class = "textArea2" type="text" id="apellido" name="apellido" required>
+          <label for="Segundo apellido">Segundo apellido </label>
+          <input class = "textArea2" type="text" id="segundoApellido" name="segundoApellido">
+          <label for="E-mail"> E - mail </label>
+          <input class = "textArea2" type="text" id="E-mail" name="E-mail" required>
+          <label for="TelefonoDeContacto"> Teléfono de contacto </label>
+          <input class = "textArea2" type="text" id="contacto" name="TelefonoDeContacto">
+          <div class="col-sm-12">
+            <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal" data-bs-target="#modalTerminos">Términos del servicio</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="modo">Modo día/noche </label>
+          <input type="checkbox" id="modo" name="modo"> <!--kITTY-->
+        </div>
+        <div class="form-group">
+          <label for="foto">Poner foto de perfil </label>
+          <input type="file" id="foto" name="foto">
+        </div>
+        <button type="submit" id="enviarComentario2"> GUARDAR CAMBIOS </button>
+      </form>
     </div>
   </main>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -79,5 +113,4 @@
   <script src="js/init.js" defer></script>
   <script src="js/my-profile.js" defer></script>
 </body>
-
 </html>
