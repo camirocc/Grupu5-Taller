@@ -24,3 +24,14 @@ document.getElementById('upload').addEventListener('change', function(event) {
         reader.readAsDataURL(file);
     }
 });
+
+let interruptor = document.querySelector (".form-check-input");
+
+interruptor.addEventListener("click", () => {
+document.body.classList.toggle("active");
+localStorage.setItem('active', document.body.classList.contains('active'));
+});
+if (localStorage.getItem('active') === 'true') {
+    document.body.classList.add('active');
+
+}
