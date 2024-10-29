@@ -30,7 +30,7 @@ let fetchJSONData = function (url) {
     }
   
     const productUrl = `https://japceibal.github.io/emercado-api/products/${productId}.json`;
-    const commentsUrl = `https://japceibal.github.io/emercado-api/products_comments/${productId}.json`;
+    let comentariosId = `https://japceibal.github.io/emercado-api/products_comments/${productId}.json`;
   
     fetchJSONData(productUrl).then((respObj) => {
       if (respObj.status === "ok") {
@@ -40,13 +40,14 @@ let fetchJSONData = function (url) {
       }
     });
   
-    fetchJSONData(commentsUrl).then((respObj) => {
+    fetchJSONData(comentariosId).then((respObj) => {
       if (respObj.status === "ok") {
         mostrarComentarios(respObj.data);
       } else {
         console.error("Error al obtener los comentarios: ", respObj.data);
       }
     });
+    
   });
   
   // Lógica para el envío de nuevos comentarios
@@ -184,56 +185,47 @@ let fetchJSONData = function (url) {
       window.location.href = `product-info.html?id=${id}`; // Redirige al usuario
     }
   
-    //   function mostrarComentarios(comentarios) {
-    //       let container = document.getElementById('mostrarComentarios');
   
-    //       const comentariosHTML = comentarios.map(comentario => `
-    //           <div class="card mb-3">
-    //               <div class="card-body">
-    //                   <h5 class="card-title">${comentario.user}</h5>
-    //                   <h6 class="card-subtitle mb-2 text-muted">${new Date(comentario.dateTime).toLocaleString()}</h6>
-    //                   <p class="card-text">${comentario.description}</p>
-    //                   <div class="rating">
-    //                       ${mostrarEstrellas(comentario.score)}
-    //                   </div>
-    //               </div>
-    //           </div>
-    //       `).join('');
-  
-    //       container.innerHTML = comentariosHTML;
-    //   }
-  
-    //   function mostrarEstrellas(score) {
-    //       let estrellasHTML = '';
-    //       for (let i = 1; i <= 5; i++) {
-    //           estrellasHTML += i <= score ?
-    //               '<span class="fa fa-star checked" style="color: gold;"></span>' :
-    //               '<span class="fa fa-star" style="color: gray;"></span>';
-    //       }
-    //       return estrellasHTML;
-    //   }
-  
-    //   function agregarComentario(usuario, comentario, calificacion) {
-    //       const nuevoComentario = `
-    //           <div class="card mb-3">
-    //               <div class="card-body">
-    //                   <h5 class="card-title">${usuario}</h5>
-    //                   <h6 class="card-subtitle mb-2 text-muted">${new Date().toLocaleString()}</h6>
-    //                   <p class="card-text">${comentario}</p>
-    //                   <div class="rating">${mostrarEstrellas(calificacion)}</div>
-    //               </div>
-    //           </div>
-    //       `;
-  
-    //       const container = document.getElementById('mostrarComentarios');
-    //       container.innerHTML += nuevoComentario;
-  
-    //       // Limpiar los campos después de enviar
-    //       document.getElementById('usuario').value = '';
-    //       document.getElementById('comentario').value = '';
-    //       document.querySelectorAll('.calificacion .estrella').forEach(star => star.classList.remove('checked'));
-    //   }
   }
+
+  //funcion comentarios
+function mostrarComentarios(comentarios) {
+  let container = document.getElementById('mostrarComentarios');
+
+  // Generar comentarios en formato de tarjeta
+  const comentariosHTML = comentarios.map(comentario => {
+    return `
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">${comentario.user}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">${new Date(comentario.dateTime).toLocaleString()}</h6>
+          <p class="card-text">${comentario.description}</p>
+          <div class="rating">
+            ${mostrarEstrellas(comentario.score)}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Insertar los comentarios en el contenedor
+  container.innerHTML = comentariosHTML;
+}
+
+function mostrarEstrellas(score) {
+  let estrellasHTML = '';
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= score) {
+      estrellasHTML += '<span class="fa fa-star checked" style="color: gold;"></span>';
+    } else {
+      estrellasHTML += '<span class="fa fa-star" style="color: gray;"></span>';
+    }
+  }
+
+  return estrellasHTML;
+}
+
   
   document.addEventListener("DOMContentLoaded", () => {
     const enviarComentarioBtn = document.getElementById("enviarComentario");
@@ -294,4 +286,3 @@ let fetchJSONData = function (url) {
       }
     });
   });
-  
