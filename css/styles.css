@@ -1,5 +1,4 @@
-
-* { 
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -141,61 +140,65 @@ body {
 a {
   color: black;
 }
+
 /*pagina de product.html*/
 
-.pb-5_container{
-  display:flex;
+.pb-5_container {
+  display: flex;
 }
+
 #controlesFiltro {
-  width: 300px; 
+  width: 300px;
   padding: 30px;
-  background-color: #dc7712;;
-  display: inline-block; 
-  align-items: start; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  margin-bottom: 20px; 
+  background-color: #dc7712;
+  ;
+  display: inline-block;
+  align-items: start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   justify-content: start;
-  align-content:start;
+  align-content: start;
   color: #fff;
 }
 
-#mostrar{
+#mostrar {
   display: block;
   padding-left: 150px;
 }
 
 .control {
   padding: 5px 10px;
-  margin: 5px 0; 
-  cursor: pointer; 
-  text-align: start; 
-  font-size: 0.875rem; 
-  border: 1px solid #ced4da; 
-  border-radius: 4px; 
-  background-color:#fff;
+  margin: 5px 0;
+  cursor: pointer;
+  text-align: start;
+  font-size: 0.875rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #fff;
   color: #dc7712;
 }
 
 .control:hover {
-  background-color:#dc7712;
-  color :#fff;
-  border:5px solid #fff;
+  background-color: #dc7712;
+  color: #fff;
+  border: 5px solid #fff;
   border-radius: 4px;
-} 
+}
 
 #usuarioBarraBtn {
   display: flex;
   justify-content: center;
-  color :  #dc7712;
+  color: #dc7712;
   align-items: center;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
   color: #dc7712;
 }
 
 #usuarioBarraBtn::after {
-  display: none;  /* Oculta el ícono de la flecha */
+  display: none;
+  /* Oculta el ícono de la flecha */
 }
 
 .card {
@@ -206,10 +209,11 @@ a {
   overflow: hidden;
 
 }
+
 #products-page {
   background-color: #e2e2e2
 }
-  
+
 /*PRODUCT-INFO*/
 #product-category {
   font-size: 15px;
@@ -261,17 +265,15 @@ a {
 
 .product-info-description button {
   background-color: #dc7712;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 3px solid #dc7712;
   color: rgb(247, 246, 246);
   font-weight: 700;
-  width: 200px;
+  width: 230px;
   position: relative;
   left: 100px;
-  bottom: 60px;
+  bottom: 85px;
   border-style: none;
-  
-
 }
 
 .product-info-description button:hover {
@@ -279,7 +281,6 @@ a {
   color: #dc7712;
   font-weight: 700;
   border: 3px solid #dc7712;
-  
 }
 
 .related-products-container {
@@ -297,10 +298,10 @@ a {
 
 
 .product-info-description button:focus {
-  outline: none; 
-  box-shadow: none; 
-  background-color: #dc7712; 
-  color: black; 
+  outline: none;
+  box-shadow: none;
+  background-color: #dc7712;
+  color: black;
 }
 
 .containerVendCat {
@@ -322,11 +323,10 @@ a {
 .container__exp {
   display: flex;
   margin: 20px;
-  
-  justify-content:center
-  
-  
+
+  justify-content: center
 }
+
 #experiencia.borde {
   height: 460px;
   padding: 30px 30px;
@@ -337,21 +337,22 @@ a {
 }
 
 #experiencia p {
-  display: block; 
+  display: block;
   text-align: center;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   font-weight: bold;
   color: black;
 }
 
 
-#experiencia input, textarea {
+#experiencia input,
+textarea {
   background-color: #d4c9c0;
   border-radius: 10px;
   border-style: none;
-  width: 100%; 
+  width: 100%;
   padding: 10px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .calificacion {
@@ -361,17 +362,17 @@ a {
 }
 
 .estrella {
-  font-size: 1rem; 
-  color: rgb(187, 174, 174); 
+  font-size: 1rem;
+  color: rgb(187, 174, 174);
   border-width: 3px;
-  border-color: black,  ;
+  border-color: black, ;
   cursor: pointer;
   padding: 5px;
 }
 
 .estrella:hover,
 .estrella.seleccionada {
-  color: gold; 
+  color: gold;
 }
 
 #enviarComentario {
@@ -381,7 +382,7 @@ a {
   border-radius: 10px;
   color: #e2e2e2;
   font-weight: 900px;
-  display: block; 
+  display: block;
   border: 3px solid #dc7712;
   position: relative;
   left: 100px;
@@ -389,18 +390,19 @@ a {
 
 
 /*secion de comentarios*/
-#mostrarComentarios{
+#mostrarComentarios {
   position: relative;
   top: -40px;
 }
-.card-body{
+
+.card-body {
   width: 700px;
-  
+
 }
 
-/* my-profile.html */ 
+/* my-profile.html */
 
-#my-profile{
+#my-profile {
   background-color: #d4c9c0;
 }
 
@@ -412,7 +414,7 @@ a {
   color: #000000;
   font-weight: bold;
   margin: 0 auto;
-  display: block; 
+  display: block;
   border: 3px solid #dc7712;
 }
 
@@ -424,31 +426,33 @@ a {
   display: grid;
   width: fit-content;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px; /* Espacio entre los campos */
+  gap: 10px;
+  /* Espacio entre los campos */
 }
 
 .textArea2 {
-  background-color: rgb(245 235 222); 
+  background-color: rgb(245 235 222);
   border-radius: 10px;
   border-style: none;
-  width: 50%; 
+  width: 50%;
   padding: 10px;
   margin-bottom: 20px;
 }
 
-.form-group{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    width: 100%;
-    margin: 20px;
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  width: 100%;
+  margin: 20px;
 }
 
 label {
-  margin-bottom: 5px; /* Espacio entre el label y el input */
+  margin-bottom: 5px;
+  /* Espacio entre el label y el input */
 }
 
-.profile-nav{
+.profile-nav {
   display: flex;
   flex-direction: row;
 }
@@ -468,22 +472,26 @@ h2 {
 
 .profile-form {
   display: grid;
-  width: 50%; 
+  width: 50%;
   justify-content: space-between;
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
 }
 
 /*MODO OSCURO*/
 body.active {
-  background-color: #121212 /* Fondo oscuro */!important;
-  color: #ffffff; /* Texto claro */
+  background-color: #121212
+    /* Fondo oscuro */
+    !important;
+  color: #ffffff;
+  /* Texto claro */
 }
 
 /* Cambiar fondo de los elementos con bg-light */
 body.active .bg-light {
-  background-color: #343a40 !important; /* Fondo oscuro para elementos claros */
+  background-color: #343a40 !important;
+  /* Fondo oscuro para elementos claros */
 }
 
 /* Cambiar color de las tarjetas */
@@ -494,7 +502,7 @@ body.active .card {
 
 /* Cambiar color del botón claro */
 body.active .btn-light {
-  background-color: #444444; 
+  background-color: #444444;
   color: #ffffff;
 }
 
@@ -519,10 +527,10 @@ body.active .borde {
 }
 
 
-body.active #usuario,body.active
-#comentario {
+body.active #usuario,
+body.active #comentario {
   background-color: #444444;
-  
+
 }
 
 .profile-img {
@@ -536,21 +544,24 @@ body.active #usuario,body.active
 /* desafiate */
 
 .profile-section {
-  position: relative; /* Permite que los elementos hijos se posicionen relativos a este contenedor */
+  position: relative;
+  /* Permite que los elementos hijos se posicionen relativos a este contenedor */
 }
 
 .profile-img {
-  width: 150px; 
-  height: 150px; 
-  border-radius: 50%; 
-  object-fit: cover; 
-  margin-bottom: 10px; /* Espacio entre la imagen y el botón */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  /* Espacio entre la imagen y el botón */
 }
 
 .btn {
-  background-color: #dd5410; 
-  border: #a88a8a solid; 
-  display: block; /* Asegura que el botón esté en una nueva línea */
+  background-color: #dd5410;
+  border: #a88a8a solid;
+  display: block;
+  /* Asegura que el botón esté en una nueva línea */
 }
 
 
@@ -615,6 +626,3 @@ body.active #usuario,body.active
     display: none;
   }
 }
-
-
-
