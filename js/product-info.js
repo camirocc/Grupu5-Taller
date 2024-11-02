@@ -140,8 +140,12 @@ function mostrarProducto(producto) {
         id: producto.id,
         name: producto.name,
         cost: producto.cost,
+        image: producto.image,
         quantity: quantity // Guardar la cantidad comprada
+        
       };
+      console.log ("")
+  
       localStorage.setItem("productInfo", JSON.stringify(productInfo)); // Guardar en localStorage
       window.location.href = "cart.html"; // Navegar a la página del carrito
     } else {
