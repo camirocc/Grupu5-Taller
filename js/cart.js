@@ -40,7 +40,7 @@ if (Array.isArray(productData.images) && productData.images.length > 0) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>D 
             `;
     
             // JavaScript para los botones de incremento y decremento
@@ -58,5 +58,25 @@ if (Array.isArray(productData.images) && productData.images.length > 0) {
                 }
             });
         }
+    });
+    
+
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const quantityInputs = document.querySelectorAll('.product-quantity'); // selecciona los campos de cantidad .product-quantity y agrega un evento input para recalcular el subtotal cada vez que el valor cambia.
+        
+        quantityInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                const productRow = input.closest('.product-row');
+                const priceElement = productRow.querySelector('.product-price');
+                const subtotalElement = productRow.querySelector('.product-subtotal');
+    
+                const price = parseFloat(priceElement.getAttribute('data-price')); // Toma el precio unitario desde el atributo data-price
+                const quantity = parseInt(input.value) || 0; // Asegura que quantity sea un número, incluso si el input está vacío
+    
+                const subtotal = price * quantity;
+                subtotalElement.textContent = subtotal.toFixed(2); // Actualiza el subtotal con el valor calculado
+            });
+        });
     });
     
