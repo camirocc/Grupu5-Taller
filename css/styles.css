@@ -479,6 +479,40 @@ h2 {
   border: 1px solid #ccc;
 }
 
+
+/*carrito de compras*/
+
+    /* Ajusta el ancho del input y de los botones dentro del grupo */
+    .cantidad-group {
+        width: 120px; /* Ajusta según el espacio necesario */
+    }
+
+    /* Define el ancho del input para que ocupe solo el espacio central */
+    .cantidad-group .form-control {
+        width: 50px;
+        padding: 0; /* Ajusta el padding para centrado */
+    }
+
+    /* Ajusta el tamaño de los botones de aumentar y disminuir */
+    .cantidad-group .btn {
+        width: 35px;
+        padding: 0; /* Reduce el espacio interno para ajustar el tamaño */
+    }
+
+    /* Alineación centrada de la imagen */
+    .product-info-description img {
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Asegura que el contenido esté centrado verticalmente */
+    .align-middle {
+        vertical-align: middle;
+    }
+
+
+
 /*MODO OSCURO*/
 body.active {
   background-color: #121212
