@@ -1,4 +1,4 @@
-// Función fetchJSONData fuera de DOMContentLoaded
+{// Función fetchJSONData fuera de DOMContentLoaded
 let fetchJSONData = function (url) {
   let result = {};
   return fetch(url)
@@ -131,22 +131,27 @@ function mostrarProducto(producto) {
 
   container.innerHTML = card;
 
+  // Función para agregar al carrito en localStorage
+  function agregarAlCarrito(producto, quantity) {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || []
+    const productoExistente = carrito.find((product) => product.id === producto.id)
+
+    if(productoExistente) {
+      productoExistente.quantity += quantity
+    } else {
+      carrito.push({...producto, quantity})
+    }
+
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+
+    actualizarContadorCarrito()
+  }
+
   // Implementar la funcionalidad del botón "Comprar"
   document.getElementById("buyButton").addEventListener("click", function () {
     const quantity = parseInt(document.getElementById('product-quantity').value); // Obtener la cantidad
     if (quantity > 0) { // Verificar que la cantidad sea válida
-      // Crear un objeto con la información del producto
-      const productInfo = {
-        id: producto.id,
-        name: producto.name,
-        cost: producto.cost,
-        image: producto.image,
-        quantity: quantity // Guardar la cantidad comprada
-        
-      };
-      console.log ("")
-  
-      localStorage.setItem("productInfo", JSON.stringify(productInfo)); // Guardar en localStorage
+      agregarAlCarrito(producto, quantity)
       window.location.href = "cart.html"; // Navegar a la página del carrito
     } else {
       alert("Por favor, ingresa una cantidad válida."); // Mensaje de error si la cantidad no es válida
@@ -156,8 +161,12 @@ function mostrarProducto(producto) {
   // Agregar el evento para el botón "Agregar al carrito"
   document.getElementById("add-to-cart").addEventListener("click", function () {
     const quantity = parseInt(document.getElementById('product-quantity').value); // Obtener la cantidad
-    // Aquí puedes manejar la lógica para agregar al carrito
-    alert(`Agregando ${quantity} de ${producto.name} al carrito.`);
+    if (quantity > 0) { // Verificar que la cantidad sea válida
+      agregarAlCarrito(producto, quantity)
+      alert(`${quantity} ${producto.name} agregados al carrito`)
+    } else {
+      alert("Por favor, ingresa una cantidad válida."); // Mensaje de error si la cantidad no es válida
+    }
   });
 
   // Llamo a la función para mostrar productos relacionados
@@ -314,3 +323,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+}

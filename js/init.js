@@ -39,3 +39,16 @@ let getJSONData = function(url){
         return result;
     });
 }
+
+function actualizarContadorCarrito() {
+  const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  const totalProductos = carrito.reduce((total, producto) => total + producto.quantity, 0)
+
+  const badge = document.getElementById("contador-carrito")
+  if (badge) {
+    badge.textContent = totalProductos
+  }
+}
+
+document.addEventListener('DOMContentLoaded', actualizarContadorCarrito)
