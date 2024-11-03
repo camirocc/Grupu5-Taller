@@ -35,7 +35,7 @@
               Nombre de usuario
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="carrito.html">Mi carrito</a>
+              <a class="dropdown-item" href="carrito.html">Mi carrito <span id="contador-carrito" class="badge text-dark bg-warning">0</span></a>
               <a class="dropdown-item" href="my-profile.html" id="profile">Mi perfil</a>
               <a class="dropdown-item" href="#" id="logout-btn">Cerrar sesión</a>
             </div>
@@ -45,9 +45,8 @@
     </div>
   </nav>
   <main>
-      <div class="container-info mt-4">
-        <div id="cart_Contenedor"></div>
-      </div>
+    <!-- Contenedor de los productos guardado en el carrito (localStorage) -->
+    <div id="cart_Contenedor" class="d-flex flex-wrap justify-content-start gap-3"></div>
   
   
     <footer class="text-muted mt-4">
