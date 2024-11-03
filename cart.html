@@ -35,7 +35,7 @@
               Nombre de usuario
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="carrito.html">Mi carrito</a>
+              <a class="dropdown-item" href="carrito.html">Mi carrito <span id="contador-carrito" class="badge text-dark bg-warning">0</span></a>
               <a class="dropdown-item" href="my-profile.html" id="profile">Mi perfil</a>
               <a class="dropdown-item" href="#" id="logout-btn">Cerrar sesión</a>
             </div>
@@ -45,20 +45,35 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <!-- Contenedor de los productos guardado en el carrito (localStorage) -->
+    <div id="cart_Contenedor" class="d-flex flex-wrap justify-content-start gap-3"></div>
+  
+  
+    <footer class="text-muted mt-4">
+      <div class="container">
+        <p class="float-end">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>
+        </p>
+      </div>
+    </footer>
+  
+    <div id="spinner-wrapper">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
+    <Script>
+      if (localStorage.getItem('active') === 'true') {
+        document.body.classList.add('active');
+      }
+  
+    </Script>
   </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
-    </div>
-  </footer>
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
