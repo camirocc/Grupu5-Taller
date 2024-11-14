@@ -13,19 +13,30 @@ document.addEventListener("DOMContentLoaded", () => {
         cartContenedor.innerHTML = "<p>No hay productos en el carrito.</p>";
     } else {
         cartContenedor.innerHTML = carrito.map((producto, index) => `
-                <div class="card" style="width: 18rem;">
-                    <img src="${producto.images[0]}" alt="${producto.name}" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">${producto.name}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">${producto.currency} <span class="product-total-cost" data-unit-price="${producto.cost}">${(producto.cost * producto.quantity).toFixed(0)}</span></h6>
-                        <div class="d-flex align-items-center mt-2">
-                            <button class="btn btn-outline-secondary btn-sm decreaseBtn" data-index="${index}" type="button">-</button>
-                            <input type="number" class="form-control form-control-sm text-center mx-2 inputCantidad" data-index="${index}" value="${producto.quantity}" min="1" style="width: 60px;">
-                            <button class="btn btn-outline-secondary btn-sm increaseBtn" data-index="${index}" type="button">+</button>
-                        </div>
+
+    <div class="card";>
+        <div class="row g-0">
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <img src="${producto.images[0]}" alt="${producto.name}" class="img-fluid"">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">${producto.name}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        <strong>${producto.currency}</strong> <span class="product-total-cost" data-unit-price="${producto.cost}">
+                           <strong> ${(producto.cost * producto.quantity).toFixed(0)} </strong>
+                        </span>
+                    </h6>
+                    <div class="d-flex align-items-center mt-2">
+                        <button class="btn btn-outline-secondary btn-sm decreaseBtn" data-index="${index}" type="button">-</button>
+                        <input type="number" class="form-control form-control-sm text-center mx-2 inputCantidad" data-index="${index}" value="${producto.quantity}" min="1" style="width: 60px;">
+                        <button class="btn btn-outline-secondary btn-sm increaseBtn" data-index="${index}" type="button">+</button>
                     </div>
-                </div> 
-            `).join('');
+                </div>
+            </div>
+        </div>
+    </div>          
+    `).join('');
 
         const buyButton = document.createElement("button");
         buyButton.textContent = "Comprar";

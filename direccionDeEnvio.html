@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -59,12 +60,61 @@
           <button id="btnPago">FORMA DE PAGO</button>
         </a>
         <a href="finalizarCompra.html">
-          <button id="btnFinalzarCompra">FINALIZAR COMPRA</button>
+          <button id="btnFinalizarCompra">FINALIZAR COMPRA</button>
         </a>
       </div>
+      <div class="container_envio">
+       
+        <h1> D I R E C C I Ó N  D E  E N V I O </h1>
+        <form action="" method="" class="direccion-form">
+
+        <label for="departamento"> Departamento: </label>
+        <select id="departamento" name="departamento" required>
+          <option value="">Selecciona un Departamento</option>
+          <option value="1">Artigas</option>
+          <option value="2">Canelones</option>
+          <option value="3">Cerro Largo</option>
+          <option value="4">Colonia</option>
+          <option value="5">Durazno</option>
+          <option value="6">Flores</option>
+          <option value="7">Florida</option>
+          <option value="8">Lavalleja</option>
+          <option value="9">Maldonado</option>
+          <option value="10">Montevideo</option>
+          <option value="11">Paysandu</option>
+          <option value="12">Río Negro</option>
+          <option value="13">Rivero</option>
+          <option value="14">Rocha</option>
+          <option value="15">Salto</option>
+          <option value="16">San Jose</option>
+          <option value="17">Soriano</option>
+          <option value="18">Tacuarembó</option>
+          <option value="19">Treinta y Tres</option>
+        </select>
+
+        <label for="calle"> Calle: </label>
+        <input type="text" id="calle" name="calle" placeholder="Calle" required>
+
+        <label for="numero"> Número: </label>
+        <input type="text" id="numero" name="numero" placeholder="Número" required>
+
+        <label for="localidad">Localidad:</label>
+        <input type="text" id="localidad" name="localidad" placeholder="Localidad" required>
+    
+        <label for="esquina">Esquina:</label>
+        <input type="text" id="esquina" name="esquina" placeholder="Esquina" required>
+
+        <label for="codigoPostal">Código Postal:</label>
+        <input type="text" id="codigoPostal" name="codigoPostal" placeholder="codigoPostal" required>
+
+      </div>
+      
+      <a href="formaDePago.html">
+        <button id="btnDireccionContinuar" type="button">CONTINUAR</button>
+      </a>
+      
     </div> 
 
-    <h1>EN DESARROLLO</h1>
     <footer class="text-muted mt-4">
         <div class="container">
           <p class="float-end">
