@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
@@ -32,11 +36,13 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item dropdown" id="username">
-            <button id="usuarioBarraBtn" class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button id="usuarioBarraBtn" class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               Nombre de usuario
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="carrito.html">Mi carrito <span id="contador-carrito" class="badge text-dark bg-warning">0</span></a>
+              <a class="dropdown-item" href="carrito.html">Mi carrito <span id="contador-carrito"
+                  class="badge text-dark bg-warning">0</span></a>
               <a class="dropdown-item" href="my-profile.html" id="profile">Mi perfil</a>
               <a class="dropdown-item" href="#" id="logout-btn">Cerrar sesión</a>
             </div>
@@ -52,7 +58,7 @@
         <a href="cart.html">
           <button id="btnCarrito" type="button">CARRITO DE COMPRAS</button>
         </a>
-        
+
         <a href="formaDeEnvio.html">
           <button id="btnEnvio">FORMA DE ENVÍO</button>
         </a>
@@ -66,31 +72,36 @@
           <button id="btnFinalizarCompra">FINALIZAR COMPRA</button>
         </a>
       </div>
-    </div> 
+    </div>
 
-    <h1> F O R M A  D E  E N V Í O </h1>
+    <h1 class="títuloPantalla"> F O R M A D E E N V Í O </h1>
 
-    <label><input type="radio" name="formaDeEnvio" value="Premium (2 a 5 días)"> Premium (2 a 5 días) </label><br>
-    <label><input type="radio" name="formaDeEnvio" value="Express (5 a 8 días)"> Express (5 a 8 días)</label><br>
-    <label><input type="radio" name="formaDeEnvio" value="Standard (12 a 15 días)"> Standard (12 a 15 días)</label>
-
-    <a href="direccionDeEnvio.html">
-
-      <button id="btnDireccionEnvio" type="button">CONTINUAR</button>
-    </a>
-    <footer class="text-muted mt-4">
-        <div class="container">
-          <p class="float-end">
-            <a href="#">Volver arriba</a>
-          </p>
-          <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>
-          </p>
+      <div class="totales">
+        <label><input type="radio" name="formaDeEnvio" value="Premium (2 a 5 días)"> Premium (2 a 5 días) </label><br>
+        <label><input type="radio" name="formaDeEnvio" value="Express (5 a 8 días)"> Express (5 a 8 días)</label><br>
+        <label><input type="radio" name="formaDeEnvio" value="Standard (12 a 15 días)"> Standard (12 a 15 días)</label>
         </div>
-      </footer>
 
-      <script src="js/bootstrap.bundle.min.js" defer></script>
-  <script src="js/index.js" defer></script>
-  <script src="js/init.js" defer></script>
-  <script src="js/cart.js" defer></script>
+        <button id="btnDireccionEnvio" class="botonPaginas" type="button"
+        onclick="window.location.href='direccionDeEnvio.html'">CONTINUAR</button>
+      </div>
+
+    <footer class="text-muted mt-4">
+      <div class="container">
+        <p class="float-end">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/formaDeEnvio.js" defer></script>
+    <script src="js/direccionDeEnvio.js"></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/init.js" defer></script>
+    <script src="js/cart.js" defer></script>
 </body>
+
 </html>

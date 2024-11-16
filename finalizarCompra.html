@@ -49,31 +49,35 @@
   <main>
 
     <div class="container_carrito">
-      <div class="container_btns">
-        <a href="cart.html">
-          <button id="btnCarrito" type="button">CARRITO DE COMPRAS</button>
-        </a>
-        
-        <a href="formaDeEnvio.html">
-          <button id="btnEnvio">FORMA DE ENVÍO</button>
-        </a>
-        <a href="direccionDeEnvio.html">
-          <button id="btnDireccion">DIRECCIÓN DE ENVÍO</button>
-        </a>
-        <a href="formaDePago.html">
-          <button id="btnPago">FORMA DE PAGO</button>
-        </a>
-        <a href="finalizarCompra.html">
-          <button id="btnFinalizarCompra">FINALIZAR COMPRA</button>
-        </a>
-      </div>
-    </div> 
+      
+      <a href="cart.html">
+        <button id="btnCarrito" type="button">CARRITO DE COMPRAS</button>
+      </a>
+      
+      <a href="formaDeEnvio.html">
+        <button id="btnEnvio">FORMA DE ENVÍO</button>
+      </a>
+      <a href="direccionDeEnvio.html">
+        <button id="btnDireccion">DIRECCIÓN DE ENVÍO</button>
+      </a>
+      <a href="formaDePago.html">
+        <button id="btnPago">FORMA DE PAGO</button>
+      </a>
+      <a href="finalizarCompra.html">
+        <button id="btnFinalizarCompra">FINALIZAR COMPRA</button>
+      </a>
+  </div>
 
-    <h1> F I N A L I Z A R  C O M P R P A </h1>
+    <h1 class = "títuloPantalla"> F I N A L I Z A R  C O M P R A </h1>
 
-    <label for="cuponDescuento">Cupón de Descuento:</label>
-    <input type="text" id="cuponDescuento" name="cuponDescuento" placeholder="cuponDescuento" required>
-    
+    <div class = "totales">
+      <p>Subtotal: <span id="subtotal">0.00</span> USD</p>
+      <p>Costo de envío: <span id="envio">0.00</span> USD</p>
+      <p>TOTAL DE LA COMPRA: <span id="total">0.00</span> USD</p>
+    </div>
+
+    <button id="btnFinalizarCompra2" type="button" class = "botonPaginas"> FINALIZAR COMPRA </button>
+  
     <footer class="text-muted mt-4">
       <div class="container">
         <p class="float-end">
@@ -88,6 +92,7 @@
     <script src="js/index.js" defer></script>
     <script src="js/init.js" defer></script>
     <script src="js/cart.js" defer></script>
+    <script src="js/direccionDeEnvio.js"></script>
 </body>
 
 </html>

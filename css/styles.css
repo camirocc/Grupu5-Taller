@@ -713,3 +713,60 @@ body.active #comentario {
   height: auto; /* Mantiene la proporción de la imagen */
   margin: 10px; /* Espacio alrededor de la imagen */
 }
+
+
+/*PANTALLAS DEL CARRITO*/
+
+.totales {
+  font-size: 28px;
+  margin-top: 50px;
+  margin-left: 150px;
+}
+
+.títuloPantalla {
+  display: flex;
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.botonPaginas{
+  background-color: #dc7712;
+  color: black;
+  font-weight: bold;
+  font-size: 26px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+.texto-abajo {
+  position: fixed;
+  bottom: 50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap; 
+}
+
+.footer .container p {
+  margin-bottom: 20px;
+}
+
+.container_carrito {
+  margin-top: 50x;
+  display: flex;
+  justify-content: center; 
+  width: 100%; 
+}
+
+
+

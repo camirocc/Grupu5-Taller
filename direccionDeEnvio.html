@@ -44,89 +44,95 @@
   </nav>
   <main>
 
+ 
     <div class="container_carrito">
-      <div class="container_btns">
-        <a href="cart.html">
-          <button id="btnCarrito" type="button">CARRITO DE COMPRAS</button>
-        </a>
-        
-        <a href="formaDeEnvio.html">
-          <button id="btnEnvio">FORMA DE ENVÍO</button>
-        </a>
-        <a href="direccionDeEnvio.html">
-          <button id="btnDireccion">DIRECCIÓN DE ENVÍO</button>
-        </a>
-        <a href="formaDePago.html">
-          <button id="btnPago">FORMA DE PAGO</button>
-        </a>
-        <a href="finalizarCompra.html">
-          <button id="btnFinalizarCompra">FINALIZAR COMPRA</button>
-        </a>
-      </div>
-      <div class="container_envio">
-       
-        <h1> D I R E C C I Ó N  D E  E N V I O </h1>
-        <form action="" method="" class="direccion-form">
-
-        <label for="departamento"> Departamento: </label>
-        <select id="departamento" name="departamento" required>
-          <option value="">Selecciona un Departamento</option>
-          <option value="1">Artigas</option>
-          <option value="2">Canelones</option>
-          <option value="3">Cerro Largo</option>
-          <option value="4">Colonia</option>
-          <option value="5">Durazno</option>
-          <option value="6">Flores</option>
-          <option value="7">Florida</option>
-          <option value="8">Lavalleja</option>
-          <option value="9">Maldonado</option>
-          <option value="10">Montevideo</option>
-          <option value="11">Paysandu</option>
-          <option value="12">Río Negro</option>
-          <option value="13">Rivero</option>
-          <option value="14">Rocha</option>
-          <option value="15">Salto</option>
-          <option value="16">San Jose</option>
-          <option value="17">Soriano</option>
-          <option value="18">Tacuarembó</option>
-          <option value="19">Treinta y Tres</option>
-        </select>
-
-        <label for="calle"> Calle: </label>
-        <input type="text" id="calle" name="calle" placeholder="Calle" required>
-
-        <label for="numero"> Número: </label>
-        <input type="text" id="numero" name="numero" placeholder="Número" required>
-
-        <label for="localidad">Localidad:</label>
-        <input type="text" id="localidad" name="localidad" placeholder="Localidad" required>
-    
-        <label for="esquina">Esquina:</label>
-        <input type="text" id="esquina" name="esquina" placeholder="Esquina" required>
-
-        <label for="codigoPostal">Código Postal:</label>
-        <input type="text" id="codigoPostal" name="codigoPostal" placeholder="codigoPostal" required>
-
-      </div>
-      
-      <a href="formaDePago.html">
-        <button id="btnDireccionContinuar" type="button">CONTINUAR</button>
+      <a href="cart.html">
+        <button id="btnCarrito" type="button">CARRITO DE COMPRAS</button>
       </a>
       
-    </div> 
+      <a href="formaDeEnvio.html">
+        <button id="btnEnvio">FORMA DE ENVÍO</button>
+      </a>
+      <a href="direccionDeEnvio.html">
+        <button id="btnDireccion">DIRECCIÓN DE ENVÍO</button>
+      </a>
+      <a href="formaDePago.html">
+        <button id="btnPago">FORMA DE PAGO</button>
+      </a>
+      <a href="finalizarCompra.html">
+        <button id="btnFinalizarCompra">FINALIZAR COMPRA</button>
+      </a>
+    </div>
+    
+     
+    <h1 class = "títuloPantalla"> D I R E C C I Ó N  D E  E N V Í O </h1>
+      
+    <div class = "totales">  
+    
+    </div>
+    
+    
+    <form action="" method="" class="direccion-form">
+      <label for="departamento"> Departamento: </label>
+      <select id="departamento" name="departamento" required>
+        <option value="">Selecciona un Departamento</option>
+        <option value="1">Artigas</option>
+        <option value="2">Canelones</option>
+        <option value="3">Cerro Largo</option>
+        <option value="4">Colonia</option>
+        <option value="5">Durazno</option>
+        <option value="6">Flores</option>
+        <option value="7">Florida</option>
+        <option value="8">Lavalleja</option>
+        <option value="9">Maldonado</option>
+        <option value="10">Montevideo</option>
+        <option value="11">Paysandu</option>
+        <option value="12">Río Negro</option>
+        <option value="13">Rivero</option>
+        <option value="14">Rocha</option>
+        <option value="15">Salto</option>
+        <option value="16">San Jose</option>
+        <option value="17">Soriano</option>
+        <option value="18">Tacuarembó</option>
+        <option value="19">Treinta y Tres</option>
+      </select>
+
+      <label for="calle"> Calle: </label>
+      <input type="text" id="calle" name="calle" placeholder="Calle" required>
+
+      <label for="numero"> Número: </label>
+      <input type="text" id="numero" name="numero" placeholder="Número" required>
+
+      <label for="localidad">Localidad:</label>
+      <input type="text" id="localidad" name="localidad" placeholder="Localidad" required>
+  
+      <label for="esquina">Esquina:</label>
+      <input type="text" id="esquina" name="esquina" placeholder="Esquina" required>
+
+      <label for="codigoPostal">Código Postal:</label>
+      <input type="text" id="codigoPostal" name="codigoPostal" placeholder="codigoPostal" required>
+  </form>  
+
+
+  <button id="btnDireccionContinuar" class="botonPaginas" type="button" onclick="location.href='formaDePago.html'">CONTINUAR</button>
 
     <footer class="text-muted mt-4">
-        <div class="container">
-          <p class="float-end">
-            <a href="#">Volver arriba</a>
-          </p>
-          <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>
-          </p>
-        </div>
-      </footer>
+      <div class="container">
+        <p class="float-end">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>
+        </p>
+      </div>
+  </footer>
+
+
   <script src="js/bootstrap.bundle.min.js" defer></script>
   <script src="js/index.js" defer></script>
   <script src="js/init.js" defer></script>
   <script src="js/cart.js" defer></script>
+  <script src="js/direccionDeEnvio.js"></script>
+  <script src="js/formaDeEnvio.js"></script>
+  <script src="js/finalizarCompra.js"></script>
 </body>
 </html>

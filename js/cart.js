@@ -38,15 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>          
     `).join('');
 
-        const buyButton = document.createElement("button");
-        buyButton.textContent = "Comprar";
-        buyButton.classList.add("btn", "btn-primary", "mt-4", "w-100");
-        buyButton.addEventListener("click", () => {
-            alert("Procesando compra...");
-            localStorage.removeItem("carrito"); // Limpiar el carrito después de la compra
-            window.location.reload(); // Recargar la página para reflejar el carrito vacío
-        });
-        cartContenedor.appendChild(buyButton);
+    const buyButton = document.createElement("button");
+    buyButton.textContent = "Comprar";
+    buyButton.classList.add("btn", "btn-primary", "mt-4", "w-100");
+    buyButton.addEventListener("click", () => {
+     alert("Procesando compra...");
+    localStorage.removeItem("carrito"); // Limpiar el carrito después de la compra
+    window.location.reload(); // Recargar la página para reflejar el carrito vacío   
+    });
+    cartContenedor.appendChild(buyButton); 
 
         // JavaScript para los botones de incremento y decremento            
         const increaseBtn = document.querySelectorAll(".increaseBtn");
