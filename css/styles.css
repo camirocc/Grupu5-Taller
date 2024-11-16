@@ -768,5 +768,10 @@ body.active #comentario {
   width: 100%; 
 }
 
-
+.direccion-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} 
 

@@ -76,11 +76,45 @@
 
     <h1 class="títuloPantalla"> F O R M A D E E N V Í O </h1>
 
-      <div class="totales">
-        <label><input type="radio" name="formaDeEnvio" value="Premium (2 a 5 días)"> Premium (2 a 5 días) </label><br>
-        <label><input type="radio" name="formaDeEnvio" value="Express (5 a 8 días)"> Express (5 a 8 días)</label><br>
-        <label><input type="radio" name="formaDeEnvio" value="Standard (12 a 15 días)"> Standard (12 a 15 días)</label>
+
+    <form class="direccion-form">
+      <!-- Forma de Envío con botones de radio -->
+
+        <!-- Opción Premium -->
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="formaDeEnvio" id="optionPremium" value="Premium (2 a 5 días)" checked>
+          <label class="form-check-label" for="optionPremium">
+            Premium (2 a 5 días)
+          </label>
         </div>
+    
+        <!-- Opción Express -->
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="formaDeEnvio" id="optionExpress" value="Express (5 a 8 días)">
+          <label class="form-check-label" for="optionExpress">
+            Express (5 a 8 días)
+          </label>
+        </div>
+    
+        <!-- Opción Standard -->
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="formaDeEnvio" id="optionStandard" value="Standard (12 a 15 días)">
+          <label class="form-check-label" for="optionStandard">
+            Standard (12 a 15 días)
+          </label>
+        </div>
+      </div>
+    </form>
+    
+    
+    
+    
+    
+      <div class="totales">
+        <!-- <label><input type="radio" name="formaDeEnvio" value="Premium (2 a 5 días)"> Premium (2 a 5 días) </label><br>
+        <label><input type="radio" name="formaDeEnvio" value="Express (5 a 8 días)"> Express (5 a 8 días)</label><br>
+        <label><input type="radio" name="formaDeEnvio" value="Standard (12 a 15 días)"> Standard (12 a 15 días)</label> -->
+        
 
         <button id="btnDireccionEnvio" class="botonPaginas" type="button"
         onclick="window.location.href='direccionDeEnvio.html'">CONTINUAR</button>
