@@ -775,14 +775,3 @@ body.active #comentario {
   flex-direction: column;
 } 
 
-/* css para eliminar las flechas por defecto en type number en Firefox, Safari y Chrome */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Eliminar las flechas en IE y Edge */
-input[type="number"] {
-    -moz-appearance: textfield;
-}
