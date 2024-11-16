@@ -58,6 +58,15 @@
              actualizarTotal();  // Recalcula el total cuando cambian la opción de envío
          });
      });
+
+     const buyButton = document.getElementById("btnFinalizarCompra2")
+     buyButton.addEventListener("click", () => {
+        console.log("HOLA HOLA HOLA");
+     alert("Procesando compra...");
+     localStorage.removeItem("carrito"); // Limpiar el carrito después de la compra
+     window.location.reload(); // Recargar la página para reflejar el carrito vacío   
+    });
+     
     
 
 

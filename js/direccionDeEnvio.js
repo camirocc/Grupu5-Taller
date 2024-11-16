@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
   // Obtener el formulario y los campos
   const form = document.querySelector('.form-envio');
   const btnContinuar = document.getElementById('btnDireccionContinuar');
