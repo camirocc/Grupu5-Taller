@@ -77,11 +77,13 @@
 
     if (esValido) {
       // Si es válido, redirigimos al siguiente paso
-      alert('Dirección validada correctamente.');
+      // alert('Dirección validada correctamente.');
+      Swal.fire("Dirección validada correctamente.");
       window.location.href = 'formaDePago.html';  // Redirigir a la forma de pago
     } else {
       // Si no es válido, mostramos un mensaje de error
-      alert('Por favor, completa todos los campos correctamente.');
+      // alert('Por favor, completa todos los campos correctamente.');
+      Swal.fire("Por favor, completa todos los campos correctamente.");
     }
   });
 });

@@ -63,7 +63,8 @@ document
     if (usuario && comentario && calificacion) {
       agregarComentario(usuario, comentario, calificacion);
     } else {
-      alert("Por favor completa todos los campos.");
+      // alert("Por favor completa todos los campos.");
+      Swal.fire("Por favor completa todos los campos.");
     }
   });
 
@@ -163,9 +164,11 @@ function mostrarProducto(producto) {
     const quantity = parseInt(document.getElementById('product-quantity').value); // Obtener la cantidad
     if (quantity > 0) { // Verificar que la cantidad sea válida
       agregarAlCarrito(producto, quantity)
-      alert(`${quantity} ${producto.name} agregados al carrito`)
+      // alert(`${quantity} ${producto.name} agregados al carrito`)
+      Swal.fire(`${quantity} ${producto.name} agregados al carrito`);
     } else {
-      alert("Por favor, ingresa una cantidad válida."); // Mensaje de error si la cantidad no es válida
+      // alert("Por favor, ingresa una cantidad válida."); 
+      Swal.fire("Por favor, ingresa una cantidad válida."); // Mensaje de error si la cantidad no es válida
     }
   });
 
@@ -317,9 +320,10 @@ document.addEventListener("DOMContentLoaded", () => {
         estrella.classList.remove("checked");
       });
     } else {
-      alert(
-        "Por favor, completa todos los campos y selecciona una calificación."
-      );
+      // alert(
+      //   "Por favor, completa todos los campos y selecciona una calificación."
+      // );
+      Swal.fire("Por favor, completa todos los campos y selecciona una calificación.");
     }
   });
 });

@@ -466,7 +466,7 @@ h2 {
   display: flex;
   justify-content: start;
   position: relative;
-  top: 90px;
+  /* top: 90px; */
 }
 
 .profile-form {

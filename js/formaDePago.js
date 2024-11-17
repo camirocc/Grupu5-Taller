@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function seleccionarFormaDePago(tipo) {
         formaDePagoSeleccionada = tipo;
         localStorage.setItem("formaDePago", formaDePagoSeleccionada); // Guarda la selección en localStorage
-        alert(`Has seleccionado: ${formaDePagoSeleccionada}`);
+        // alert(`Has seleccionado: ${formaDePagoSeleccionada}`);
+        Swal.fire(`Has seleccionado: ${formaDePagoSeleccionada}`);
     }
 
     // Listeners para los botones de forma de pago
@@ -22,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (formaDePagoSeleccionada) {
             window.location.href = "finalizarCompra.html"; // Redirige a la pantalla de finalizar compra
         } else {
-            alert("Por favor, selecciona una forma de pago antes de continuar.");
+            // alert("Por favor, selecciona una forma de pago antes de continuar.");
+            Swal.fire("Por favor, selecciona una forma de pago antes de continuar.");
         }
     });
 });
