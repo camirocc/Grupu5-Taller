@@ -101,8 +101,6 @@
 //     }
 // });
 
-
-
 // document.addEventListener("DOMContentLoaded", function () {
 //     const quantityInputs = document.querySelectorAll('.product-quantity'); // selecciona los campos de cantidad .product-quantity y agrega un evento input para recalcular el subtotal cada vez que el valor cambia.
 
@@ -160,17 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>          
         `).join('');
 
-        // const buyButton = document.createElement("button");
-        // buyButton.textContent = "Comprar";
-        // buyButton.classList.add("btn", "btn-primary", "mt-4", "w-100");
-        // buyButton.addEventListener("click", () => {
-        //     alert("Procesando compra...");
-        //     localStorage.removeItem("carrito"); // Limpiar el carrito después de la compra
-        //     window.location.reload(); // Recargar la página para reflejar el carrito vacío
-        // });
-        // cartContenedor.appendChild(buyButton);
-
-        // JavaScript para los botones de incremento y decremento
         const increaseBtn = document.querySelectorAll(".increaseBtn");
         increaseBtn.forEach((button) => {
             button.addEventListener("click", () => {
@@ -209,10 +196,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const productTotalElement = document.querySelectorAll(".product-total-cost")[index];
         const unitPrice = parseFloat(productTotalElement.getAttribute("data-unit-price"));
-        productTotalElement.textContent = unitPrice * producto.quantity;
+        productTotalElement.textContent = (unitPrice * producto.quantity).toFixed(2);
 
         document.querySelectorAll(".inputCantidad")[index].value = producto.quantity;
 
         localStorage.setItem("carrito", JSON.stringify(carrito));
+        actualizarSubtotal();
     }
+
+    function actualizarSubtotal() {
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const subtotal = carrito.reduce((acc, producto) => acc + producto.cost * producto.quantity, 0);
+        document.getElementById("subtotalMonto").textContent = `USD ${subtotal.toFixed(2)}`;
+    }
+
+    actualizarSubtotal();
 });
+
