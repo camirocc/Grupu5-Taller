@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //     localStorage.removeItem("carrito"); // Limpiar el carrito después de la compra
         //     window.location.reload(); // Recargar la página para reflejar el carrito vacío
         // });
-        cartContenedor.appendChild(buyButton);
+        // cartContenedor.appendChild(buyButton);
 
         // JavaScript para los botones de incremento y decremento
         const increaseBtn = document.querySelectorAll(".increaseBtn");
