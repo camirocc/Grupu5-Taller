@@ -155,7 +155,8 @@ function mostrarProducto(producto) {
       agregarAlCarrito(producto, quantity)
       window.location.href = "cart.html"; // Navegar a la página del carrito
     } else {
-      alert("Por favor, ingresa una cantidad válida."); // Mensaje de error si la cantidad no es válida
+      // alert("Por favor, ingresa una cantidad válida.");  
+      Swal.fire("Por favor, ingresa una cantidad válida.");// Mensaje de error si la cantidad no es válida
     }
   });
 
