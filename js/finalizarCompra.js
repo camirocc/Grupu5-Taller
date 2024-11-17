@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", actualizarTotal);
 // Botón para finalizar compra
 const buyButton = document.getElementById("btnFinalizarCompra2");
 buyButton.addEventListener("click", () => {
-    alert("Compra exitosa!");
+    // alert("Compra exitosa!");
+    Swal.fire("Compra exitosa!");
     localStorage.removeItem("carrito"); // Limpia el carrito después de la compra
     localStorage.removeItem("formaDeEnvio"); // Limpia la selección de envío
     window.location.href="index.html"; // Recarga la página para reflejar el carrito vacío
