@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Dirección de Envío</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Dirección de Envío</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
@@ -30,11 +34,13 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item dropdown" id="username">
-            <button id="usuarioBarraBtn" class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button id="usuarioBarraBtn" class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               Nombre de usuario
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="cart.html">Mi carrito <span id="contador-carrito" class="badge text-dark bg-warning">0</span></a>
+              <a class="dropdown-item" href="cart.html">Mi carrito <span id="contador-carrito"
+                  class="badge text-dark bg-warning">0</span></a>
               <a class="dropdown-item" href="my-profile.html" id="profile">Mi perfil</a>
               <a class="dropdown-item" href="#" id="logout-btn">Cerrar sesión</a>
             </div>
@@ -46,15 +52,15 @@
 
   <main>
     <div class="container_carrito">
-      <a href="cart.html"><button id="btnCarrito" type="button">CARRITO DE COMPRAS</button></a>
-      <a href="formaDeEnvio.html"><button id="btnEnvio">FORMA DE ENVÍO</button></a>
-      <a href="direccionDeEnvio.html"><button id="btnDireccion">DIRECCIÓN DE ENVÍO</button></a>
-      <a href="formaDePago.html"><button id="btnPago">FORMA DE PAGO</button></a>
-      <a href="finalizarCompra.html"><button id="btnFinalizarCompra">FINALIZAR COMPRA</button></a>
+      <button id="btnCarrito" type="button">CARRITO DE COMPRAS</button>
+      <button id="btnEnvio">FORMA DE ENVÍO</button>
+      <button id="btnDireccion">DIRECCIÓN DE ENVÍO</button>
+      <button id="btnPago">FORMA DE PAGO</button>
+      <button id="btnFinalizarCompra">FINALIZAR COMPRA</button>
     </div>
-    
+
     <h1 class="títuloPantalla">DIRECCIÓN DE ENVÍO</h1>
-    
+
     <form action="" method="POST" class="form-envio row g-3">
       <div class="col-md-4">
         <label for="departamento" class="form-label">Departamento:</label>
@@ -109,21 +115,23 @@
 
       <div class="col-md-4">
         <label for="codigoPostal" class="form-label">Código Postal:</label>
-        <input type="number" id="codigoPostal" name="codigoPostal" class="form-control" placeholder="Código Postal" min="0" max="99999" required>
+        <input type="number" id="codigoPostal" name="codigoPostal" class="form-control" placeholder="Código Postal"
+          min="0" max="99999" required>
         <div class="invalid-feedback">Por favor, ingresa un código postal válido.</div>
       </div>
 
       <div class="col-12">
         <button id="btnDireccionContinuar" class="botonPaginas" type="submit">CONTINUAR</button>
       </div>
-    </form>  
+    </form>
 
     <footer class="text-muted mt-4">
       <div class="container">
         <p class="float-end">
           <a href="#">Volver arriba</a>
         </p>
-        <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jóvenes a Programar</a></p>
+        <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jóvenes a Programar</a>
+        </p>
       </div>
     </footer>
 
@@ -138,4 +146,5 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </main>
 </body>
+
 </html>

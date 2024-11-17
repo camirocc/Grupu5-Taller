@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>eMercado - Todo lo que busques está aquí</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -15,7 +17,7 @@
 
 <body>
   <style>
-    body{
+    body {
       background-color: #F5EBDF;
     }
   </style>
@@ -38,11 +40,13 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <li class="nav-item dropdown" id="username">
-            <button id="usuarioBarraBtn" class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button id="usuarioBarraBtn" class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
               Nombre de usuario
             </button>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="carrito.html">Mi carrito <span id="contador-carrito" class="badge text-dark bg-warning">0</span></a>
+              <a class="dropdown-item" href="carrito.html">Mi carrito <span id="contador-carrito"
+                  class="badge text-dark bg-warning">0</span></a>
               <a class="dropdown-item" href="my-profile.html" id="profile">Mi perfil</a>
               <a class="dropdown-item" href="#" id="logout-btn">Cerrar sesión</a>
             </div>
@@ -55,24 +59,13 @@
 
     <div class="container_carrito">
       <div class="container_btns">
-        <a href="cart.html">
-          <button id="btnCarrito" class="buttonsCart" type="button">CARRITO DE COMPRAS</button>
-        </a>
-        
-        <a href="formaDeEnvio.html">
-          <button id="btnEnvio" class="buttonsCart" type="button">FORMA DE ENVÍO</button>
-        </a>
-        <a href="direccionDeEnvio.html">
-          <button id="btnDireccion" class="buttonsCart" type="button">DIRECCIÓN DE ENVÍO</button>
-        </a>
-        <a href="formaDePago.html">
-          <button id="btnPago" class="buttonsCart" type="button">FORMA DE PAGO</button>
-        </a>
-        <a href="finalizarCompra.html">
-          <button id="btnFinalizarCompra" class="buttonsCart" type="button">FINALIZAR COMPRA</button>
-        </a>
+        <button id="btnCarrito" class="buttonsCart" type="button">CARRITO DE COMPRAS</button>
+        <button id="btnEnvio" class="buttonsCart" type="button">FORMA DE ENVÍO</button>
+        <button id="btnDireccion" class="buttonsCart" type="button">DIRECCIÓN DE ENVÍO</button>
+        <button id="btnPago">FORMA DE PAGO</button>
+        <button id="btnFinalizarCompra" class="buttonsCart" type="button">FINALIZAR COMPRA</button>
       </div>
-    </div>  
+    </div>
 
     <!-- Contenedor de los productos guardado en el carrito (localStorage) -->
     <div id="cart_Contenedor" class="d-flex flex-wrap justify-content-start gap-3"></div>
@@ -83,7 +76,7 @@
 
     <div class="containerBtnCarrito">
       <button id="btnComprarCarrito" class="botonPaginas" type="button"
-      onclick="window.location.href='formaDeEnvio.html'">SIGUIENTE </button>
+        onclick="window.location.href='formaDeEnvio.html'">SIGUIENTE </button>
     </div>
 
     <footer class="text-muted mt-4">
@@ -95,7 +88,7 @@
         </p>
       </div>
     </footer>
-  
+
     <div id="spinner-wrapper">
       <div class="lds-ring">
         <div></div>
@@ -108,7 +101,7 @@
       if (localStorage.getItem('active') === 'true') {
         document.body.classList.add('active');
       }
-  
+
     </Script>
   </main>
   <div id="spinner-wrapper">

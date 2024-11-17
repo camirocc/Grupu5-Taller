@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   fetchJSONData(productUrl).then((respObj) => {
     if (respObj.status === "ok") {
+      console.log(respObj.data);
       mostrarProducto(respObj.data);
     } else {
       console.error("Error al obtener los datos: ", respObj.data);
@@ -118,7 +119,7 @@ function mostrarProducto(producto) {
                     <div class="borde">
                         <h2 id="product-category">Categoría: ${producto.category}</h2>
                         <h1 id="product-name">${producto.name}</h1>
-                        <h3 id="product-price">USD ${producto.cost}</h3>
+                        <h3 id="product-price">${producto.currency} ${producto.cost}</h3>
                         <p id="product-description">${producto.description}</p>
                         <p id="sold-count">Se han vendido ${producto.soldCount}</p>
                         <input type="number" class="cntd" min="1" id="product-quantity"> <br>
